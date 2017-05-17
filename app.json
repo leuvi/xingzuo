@@ -1,12 +1,12 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/detail/detail"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#1a1866",
+    "navigationBarBackgroundColor": "#151450",
     "navigationBarTitleText": "今日星座指南",
-    "navigationBarTextStyle":"#fff"
+    "navigationBarTextStyle": "white"
   }
 }

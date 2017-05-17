@@ -1,10 +1,41 @@
 <!--index.wxml-->
 <view class="container">
-  <view  bindtap="bindViewTap" class="userinfo">
-    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+  <scroll-view scroll-y="true" style="height: {{wheight}}px;">
+    <view class="content">
+      <view class="list">
+        <block wx:if="{{!isedit}}">
+          <view class="showlist" wx:if="{{userlist.length > 0}}">
+            <view class="userlist" wx:for="{{userlist}}" wx:for-item="item" wx:key="*this">
+              <view class="username" bindtap="toDetail" data-xz="{{item.id}}" data-name="{{item.name}}">{{item.name}}的今日运势</view>
+            </view>
+          </view>
+          <view class="edit" bindtap="edit">
+            <text wx:if="{{userlist.length == 0}}">首次登录请</text>设置用户
+          </view>
+        </block>
+        <block wx:else>
+          <view class="editlist" wx:if="{{userlist.length > 0}}">
+            <view class="userlist" wx:for="{{userlist}}" wx:for-item="item" wx:for-index="idx" wx:key="*this">
+              <view class="username">{{item.xz}}的{{item.name}}</view>
+              <view class="delete" data-id="{{idx}}" bindtap="deleteUser">
+                <icon type="clear" color="#97bbff" size="20" />
+              </view>
+            </view>
+          </view>
+          <view class="addarea">
+            <input placeholder="输入昵称.." placeholder-class="p_newuser" class="newuser" value="{{newuser}}" bindinput="bindKeyInput" />
+            <picker bindchange="bindPickerChange" value="{{xz_index}}" range-key="astroname" range="{{all_xz}}">
+              <view class="picker">
+                Ta的星座：{{all_xz[xz_index].astroname}}
+              </view>
+            </picker>
+          </view>
+          <view class="control">
+            <view class="save" bindtap="save">添加</view>
+            <view class="cancle" bindtap="cancle">返回</view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </scroll-view>
 </view>

@@ -1,0 +1,152 @@
+<!--detail.wxml-->
+<view class="container">
+  <scroll-view scroll-y="true" style="height: {{wheight}}px;">
+    <view class="detail" wx:if="{{res != ''}}">
+      <view class="title">今日运势</view>
+      <view class="today item">
+        <view class="color">
+          <view class="label">幸运颜色：</view>
+          <text>{{res.today.color}}</text>
+        </view>
+        <view class="star">
+          <view class="label">贵人星座：</view>
+          <text>{{res.today.star}}</text>
+        </view>
+        <view class="number">
+          <view class="label">幸运数字：</view>
+          <text>{{res.today.number}}</text>
+        </view>
+        <view class="money">
+          <view class="label">财运运势：</view>
+          <view class="full">
+            <view class="inner" style="width: {{res.today.money * 100 / 5}}%"></view>
+          </view>
+        </view>
+        <view class="love">
+          <view class="label">爱情运势：</view>
+          <view class="full">
+            <view class="inner" style="width: {{res.today.love * 100 / 5}}%"></view>
+          </view>
+        </view>
+        <view class="health">
+          <view class="label">健康运势：</view>
+          <view class="full">
+            <view class="inner" style="width: {{res.today.health * 100 / 5}}%"></view>
+          </view>
+        </view>
+        <view class="career">
+          <view class="label">工作运势：</view>
+          <view class="full">
+            <view class="inner" style="width: {{res.today.career * 100 / 5}}%"></view>
+          </view>
+        </view>
+        <view class="summary">
+          <view class="label">综合运势：</view>
+          <view class="full">
+            <view class="inner" style="width: {{res.today.summary * 100 / 5}}%"></view>
+          </view>
+        </view>
+        <view class="presummary">{{res.today.presummary}}</view>
+        <view class="share">点击右上按钮分享给Ta吧~</view>
+      </view>
+      <view class="title">明日运势</view>
+      <view class="tomorrow item">
+        <view class="color">
+          <view class="label">幸运颜色：</view>
+          <text>{{res.tomorrow.color}}</text>
+        </view>
+        <view class="star">
+          <view class="label">贵人星座：</view>
+          <text>{{res.tomorrow.star}}</text>
+        </view>
+        <view class="number">
+          <view class="label">幸运数字：</view>
+          <text>{{res.tomorrow.number}}</text>
+        </view>
+        <view class="money">
+          <view class="label">财运运势：</view>
+          <view class="full">
+            <view class="inner" style="width: {{res.tomorrow.money * 100 / 5}}%"></view>
+          </view>
+        </view>
+        <view class="love">
+          <view class="label">爱情运势：</view>
+          <view class="full">
+            <view class="inner" style="width: {{res.tomorrow.love * 100 / 5}}%"></view>
+          </view>
+        </view>
+        <view class="health">
+          <view class="label">健康运势：</view>
+          <view class="full">
+            <view class="inner" style="width: {{res.tomorrow.health * 100 / 5}}%"></view>
+          </view>
+        </view>
+        <view class="career">
+          <view class="label">工作运势：</view>
+          <view class="full">
+            <view class="inner" style="width: {{res.tomorrow.career * 100 / 5}}%"></view>
+          </view>
+        </view>
+        <view class="summary">
+          <view class="label">综合运势：</view>
+          <view class="full">
+            <view class="inner" style="width: {{res.tomorrow.summary * 100 / 5}}%"></view>
+          </view>
+        </view>
+        <view class="presummary">{{res.tomorrow.presummary}}</view>
+      </view>
+      <view class="title">本周运势</view>
+      <view class="week item">
+        <view class="money">
+          <text>财运运势：{{res.week.money}}</text>
+        </view>
+        <view class="love">
+          <text>爱情运势：{{res.week.love}}</text>
+        </view>
+        <view class="health">
+          <text>健康运势：{{res.week.health}}</text>
+        </view>
+        <view class="career">
+          <text>工作运势：{{res.week.career}}</text>
+        </view>
+        <view class="career">
+          <text>求职运势：{{res.week.job}}</text>
+        </view>
+      </view>
+      <view class="title">本月运势</view>
+      <view class="month item">
+        <view class="money">
+          <text>财运运势：{{res.month.money}}</text>
+        </view>
+        <view class="love">
+          <text>爱情运势：{{res.month.love}}</text>
+        </view>
+        <view class="health">
+          <text>健康运势：{{res.month.health}}</text>
+        </view>
+        <view class="career">
+          <text>工作运势：{{res.month.career}}</text>
+        </view>
+        <view class="summary">
+          <text>综合运势：{{res.month.summary}}</text>
+        </view>
+      </view>
+      <view class="title">本年运势</view>
+      <view class="year item">
+        <view class="money">
+          <text>财运运势：{{res.year.money}}</text>
+        </view>
+        <view class="love">
+          <text>爱情运势：{{res.year.love}}</text>
+        </view>
+        <view class="career">
+          <text>工作运势：{{res.year.career}}</text>
+        </view>
+        <view class="summary">
+          <text>综合运势：{{res.year.summary}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="loading" wx:else>正在加载数据..</view>
+  </scroll-view>
+</view>

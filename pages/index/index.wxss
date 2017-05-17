@@ -1,21 +1,83 @@
 /**index.wxss**/
-.userinfo {
+
+.content {
+  color: #fff;
+  padding: 120rpx;
+}
+.list {
   display: flex;
   flex-direction: column;
+}
+
+.userlist {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30rpx;
+}
+.username {
+  background: #97bbff;
+  width: 100%;
+  color: #151450;
+  border-radius: 5px;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 36rpx;
+}
+.edit {
+  border-radius: 5px;
+  color: #97bbff;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 36rpx;
+  box-sizing: border-box;
+  background: rgba(13, 14, 56, .6);
+  border: 1px solid #577ae7;
+}
+.delete {
+  height: 80rpx;
+  width: 80rpx;
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.addarea {
+  display: flex;
+  flex-direction: column;
 }
-
-.userinfo-nickname {
-  color: #aaa;
+.newuser, .picker {
+  height: 80rpx;
+  line-height: 80rpx;
+  border: 1px solid #97bbff;
+  box-sizing: border-box;
+  margin-bottom: 30rpx;
+  text-align: center;
+  color: #97bbff;
+  font-size: 36rpx;
+  border-radius: 5px;
 }
-
-.usermotto {
-  margin-top: 200px;
+.p_newuser {
+  color: #97bbff;
+}
+.control {
+  display: flex;
+}
+.save, .cancle {
+  flex-grow: 1;
+  height: 80rpx;
+  line-height: 80rpx;
+  border: 1px solid #97bbff;
+  box-sizing: border-box;
+  text-align: center;
+  color: #97bbff;
+  font-size: 36rpx;
+  border-radius: 5px;
+}
+.cancle {
+  margin-left: 30rpx;
+}
+.save {
+  background-color: #97bbff;
+  color: #151450;
 }
